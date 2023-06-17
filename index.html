@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesi Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        SESI QUIZ
+    </header>
+
+    <main>
+        <div>
+            <h1 class="pontos" id="pontuacao"></h1>
+            <h1 class="pergunta" id="pergunta">Aqui vem a pergunta que queremos...</h1>
+        </div>
+        <div class="div-img-pergunta">
+            <img src="https://img.freepik.com/fotos-gratis/terra-e-galaxia-elementos-desta-imagem-fornecidos-pela-nasa_335224-750.jpg?w=2000" alt="" class="img-pergunta" id="imagem">
+        </div>
+        <div class="alternativas">
+            <h3 id="resp1" onclick="respondeu(1)">Resposta 1</h3> 
+            <h3 id="resp2" onclick="respondeu(2)">Resposta 2</h3>
+        </div>
+        <div class="alternativas">
+            <h3 id="resp3" onclick="respondeu(3)">Resposta 3</h3>
+            <h3 id="resp4" onclick="respondeu(4)">Resposta 4</h3>
+        </div>
+    </main>
+
+    <footer>
+        <h3>Sesi / Senai - Curso Desenvolvimento de Sistemas</h3>
+    </footer>
+</body>
+<script src="js/script.js"></script>
+</html>
