@@ -55,7 +55,7 @@ function exibirPerguntas(){
     document.getElementById('listaPerguntas').innerHTML = ''
     listaPerguntas.forEach((item, i) => {
         document.getElementById('listaPerguntas').innerHTML += 
-            `<p>
+            `<div>
                 <b>Pergunta</b>: ${item.pergunta} 
                 <b>Resp 1</b>: ${item.resp1} 
                 <b>Resp 2</b>: ${item.resp2} 
