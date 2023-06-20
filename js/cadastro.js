@@ -1,4 +1,4 @@
-var listaPerguntas = JSON.parse(localStorage.getItem('bdQuiz')) || []
+var listaPerguntas = JSON.parse(localStorage.getItem('bdQuiz'))
 console.log(listaPerguntas)
 
 function cadastrarPergunta(){

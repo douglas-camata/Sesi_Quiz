@@ -1,61 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de perguntas</title>
     <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header>
+    <header class="titulo">
         SESI QUIZ
     </header>
 
     <main>
+        <div class="alternativas">
+            <div class="pergunta">
+                Selecione o Tema: 
+                <select class="select" id="tema">
+                    <option value="Conhecimentos Gerais" selected>Conhecimentos Gerais</option>
+                    <option value="Filmes">Filmes</option>
+                    <option value="Futebol">Futebol</option>
+                    <option value="Esportes">Esportes</option>
+                    <option value="Games">Games</option>
+                </select>
+            </div>
+        </div>
         <div>
-            <h2 class="pergunta">Cadastro de pergunta</h2>
+            <div class="pergunta">
+                <input type="text" id="pergunta" placeholder="Digite sua pergunta:">
+            </div>
+        </div>
+        <br>
+        <div class="div-img-pergunta">
+            <div class="pergunta">
+                <input type="text" id="imagem" onkeyup="exibirIMG()" placeholder="Digite o link da imagem"><br>
+            </div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Item_sem_imagem.svg/1200px-Item_sem_imagem.svg.png"
+                id="foto" class="img-pergunta">
         </div>
         <div class="alternativas">
-            Tema
-            <select id="tema">
-                <option value="Conhecimentos Gerais" selected>Conhecimentos Gerais</option>
-                <option value="Filmes">Filmes</option>
-                <option value="Futebol">Futebol</option>
-                <option value="Esportes">Esportes</option>
-                <option value="Games">Games</option>
-            </select><br><br>
-            Pergunta: 
-            <input type="text" id="pergunta" ><br><br>
-            Imagem alternativa: 
-            <input type="text" id="imagem" onkeyup="exibirIMG()"><br>
-            <img src="" id="foto">            
-            <br>
-            Resposta 1: 
-            <input type="text" id="resp1" ><br><br>
-            Resposta 2: 
-            <input type="text" id="resp2" ><br><br>
-            Resposta 3: 
-            <input type="text" id="resp3" ><br><br>
-            Resposta 4: 
-            <input type="text" id="resp4"><br><br>
-            Nr da Resposta correta
-            <select id="correta">
-                <option value="1" selected>1ª</option>
-                <option value="2">2ª</option>
-                <option value="3">3ª</option>
-                <option value="4">4ª</option>
-            </select><br><br>
-            <button onclick="cadastrarPergunta()">Cadastrar Pergunta</button>
+            <div class='botao bt1'>
+                <input type="text" id="resp1" class="input-resp" placeholder="Informe a Resposta 1">
+            </div>
+            <div class='botao bt2'>
+                <input type="text" id="resp2" class="input-resp" placeholder="Informe a Resposta 2">
+            </div>
+        </div>
+        <div class="alternativas">
+            <div class='botao bt3'>
+                <input type="text" id="resp3" class="input-resp" placeholder="Informe a Resposta 3">
+            </div>
+            <div class='botao bt4'>
+                <input type="text" id="resp4" class="input-resp" placeholder="Informe a Resposta 4">
+            </div>
+        </div>
+
+        <div class="alternativas">
+            <div class="pergunta">
+                Correta
+                <select id="correta" class="select">
+                    <option value="1">1ª Alternativa</option>
+                    <option value="2">2ª Alternativa</option>
+                    <option value="3">3ª Alternativa</option>
+                    <option value="4">4ª Alternativa</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="alternativas">
+            <button onclick="cadastrarPergunta()" class="botao">Cadastrar Pergunta</button>
         </div>
 
         <div id="listaPerguntas">
-            
+
         </div>
     </main>
+
 
     <footer>
         <h3>Sesi / Senai - Curso Desenvolvimento de Sistemas</h3>
     </footer>
 </body>
 <script src="js/cadastro.js"></script>
+
 </html>

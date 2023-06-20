@@ -7,11 +7,26 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>SESI QUIZ</h1>
+    <header class="titulo">
+        SESI QUIZ
     </header>
 
-    <main>
+    <section id="jogador">
+
+        <img src="img/logo.png" alt="">
+        <div>
+            <div class="pergunta">
+                <input type="text" id="jogadorNome" placeholder="Nome do Jogador:">
+            </div>
+        </div>
+
+        <div class="alternativas">
+            <button onclick="iniciarJogo()" class="botao">Iniciar Jogo</button>
+        </div>
+
+    </section>
+
+    <main id="jogo">
         <div>
             <h1 class="pontos" id="pontuacao"></h1>
             <h1 class="pergunta" id="pergunta">Aqui vem a pergunta que queremos...</h1>
@@ -32,6 +47,26 @@
     <footer>
         <h3>Sesi / Senai - Curso Desenvolvimento de Sistemas</h3>
     </footer>
+
+
+    <section id="finalJogo">
+
+        <header class="titulo">
+            SESI QUIZ
+        </header>
+
+        <div id="rank">
+
+
+
+        </div>
+
+        <div class="alternativas">
+            <button onclick="NovoJogo()" class="botao">Novo Jogo</button>
+        </div>
+
+    </section>
+
 </body>
 <script src="js/script.js"></script>
 </html>

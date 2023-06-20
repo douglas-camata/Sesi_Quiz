@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+
+* {
+    margin : 0;
+    padding: 0;
+}
+
 body{
     background: #C33764;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
@@ -9,12 +16,28 @@ header, .pergunta, .div-img-pergunta {
     text-align: center;
 }
 
+.titulo {
+    font-size: 50px;
+    margin: 20px;
+    font-weight: 900;
+    font-family: 'Tilt Prism', cursive;
+}
+
 .pergunta{
     color: black;
     padding: 20px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 5px 5px 5px black;
+    font-size: 30px;
+}
+.pergunta > input {
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    text-align: center;
+    border: none;
+    padding: 10px 0;
 }
 
 footer {
@@ -24,14 +47,19 @@ footer {
 .img-pergunta {
     max-height: 350px;
     box-shadow: 5px 5px 5px white;
+    margin: 20px;
 }
 
 .alternativas {
     display: flex;
     gap: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
 }
 .botao {
-    width: 50%;
+    width: 45%;
     text-align: center;
     font-weight: bold;
     font-size: 1.7em;
@@ -44,6 +72,7 @@ footer {
     box-shadow: 5px 5px 5px black;
     text-shadow: 2px 2px 3px black;
     transition: 500ms;
+    margin: 20px;
 }
 .bt1 {
     background-image: linear-gradient(to right, #700c09 0%, #ff0008  51%, #700c09  100%);
@@ -63,5 +92,53 @@ footer {
     background-image: linear-gradient(to right, #163000 0%, #0f9b0f  51%, #163000  100%);
 }
 
+.input-resp {
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: none;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+.input-resp::placeholder {
+    color: white;
+}
 
+.select {
+    font-size: 30px;
+}
+#jogador {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#jogador > img {
+    width: 20rem;
+    margin: 20px;
+}
+#jogador > div {
+    max-width: 800px;
+}
+#jogo {
+    display: none;
+}
 
+#finalJogo {
+    position: absolute;
+    top : 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none;
+}
+#rank {
+    text-align: center;
+}
+#rank > p {
+    font-size: 30px;
+    margin: 10px;
+}
