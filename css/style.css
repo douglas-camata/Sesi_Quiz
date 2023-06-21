@@ -30,6 +30,7 @@ header, .pergunta, .div-img-pergunta {
     border-radius: 10px;
     box-shadow: 5px 5px 5px black;
     font-size: 30px;
+    margin: 0 10px
 }
 .pergunta > input {
     width: 100%;
@@ -52,11 +53,11 @@ footer {
 
 .alternativas {
     display: flex;
-    gap: 30px;
+    gap: 0.5rem;
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 .botao {
     width: 45%;
@@ -72,13 +73,13 @@ footer {
     box-shadow: 5px 5px 5px black;
     text-shadow: 2px 2px 3px black;
     transition: 500ms;
-    margin: 20px;
+    margin: 0.2em;
 }
 .bt1 {
     background-image: linear-gradient(to right, #700c09 0%, #ff0008  51%, #700c09  100%);
 }
 .bt1:hover, .bt2:hover, .bt3:hover, .bt4:hover{
-    transform: scale(1.05);
+    transform: scale(1.03);
     transition: 500ms;
     cursor: pointer;
 }
@@ -141,4 +142,15 @@ footer {
 #rank > p {
     font-size: 30px;
     margin: 10px;
+}
+.pontos {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+@media (max-width:500px) {
+    .img-pergunta {
+        max-width: 90%;
+    }
+    
 }

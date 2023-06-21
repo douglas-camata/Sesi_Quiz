@@ -5,6 +5,8 @@ var pontuacao = 0
 var listaSorteadas = []
 var rank = JSON.parse(localStorage.getItem('bdQuizRank')) || []
 
+var iniHora = ''
+
 console.log(listaPerguntas)
 function carregarPergunta() {
 
@@ -29,6 +31,7 @@ function carregarPergunta() {
     document.getElementById('resp3').innerHTML = listaPerguntas[iSorteada].resp3
     document.getElementById('resp4').innerHTML = listaPerguntas[iSorteada].resp4
 
+    iniHora = Date.now()
 }
 carregarPergunta()
 
@@ -51,10 +54,12 @@ function fimDeJogo() {
                 <p class='rank'> <b> ${i +1}º </b>  ${element.nome}  ${element.pontos}pts </p>
             `
     })
-
 }
 
 function respondeu(resposta) {
+    var tempo = Date.now() - iniHora
+    alert (Date.now() + ' - ' +  iniHora + ' - ' + tempo)
+
     if (resposta == respCorreta) {
         alert('RESPOSTA CORRETA')
         pontuacao += 1
@@ -65,7 +70,7 @@ function respondeu(resposta) {
         carregarPergunta()
     }
 
-    document.getElementById('pontuacao').innerHTML = pontuacao + ' Pontos'
+    document.getElementById('pontuacao').innerHTML = document.getElementById('jogadorNome').value + ' - ' + pontuacao + ' Pontos'
 }
 
 function iniciarJogo() {
